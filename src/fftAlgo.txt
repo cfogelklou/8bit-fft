@@ -1,0 +1,24 @@
+function [f] = myfft2(N,f);
+% My FFT program
+% Written to test the theory in the DIT algorithm from the web
+%
+p = log2(N);
+f = arraybitrev(p,f)    
+Bp = N/2;
+Np = 2;
+for P=0:1:(p-1)
+    Npp = Np/2;
+    BaseT = 0
+    for b=0:1:(Bp-1)
+        BaseB = BaseT + Npp
+        for k=0:1:(Npp-1)
+            top = f(BaseT + k + 1);
+            bot = f(BaseB + k + 1) * exp(-i*2*pi*k/Np);
+            f(BaseT + k + 1) = top + bot;
+            f(BaseB + k + 1) = top - bot;
+        end
+        BaseT = BaseT + Np;
+    end
+    Bp = Bp / 2;
+    Np = Np * 2;
+end

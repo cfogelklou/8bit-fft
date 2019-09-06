@@ -1,0 +1,5 @@
+#define MAXFFTSIZE 512
+#define FFTTABLESIZE MAXFFTSIZE/2
+#define PRAM_ADDRX $00
+#define TEXT_ADDRX $01
+
