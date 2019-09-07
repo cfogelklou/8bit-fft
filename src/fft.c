@@ -20,25 +20,25 @@ extern void send_c32_t(void *protocol_instance, c32_t data);
 extern void csend(void *protocol_instance, u8_t in_char);
 extern void send_c16_t(void *protocol_instance, c16_t data);
 
-volatile u8_t fft_dp1_lo __attribute__((section(".gpr")));
-volatile u8_t fft_dp1_hi __attribute__((section(".gpr")));
-volatile u8_t fft_dp2_lo __attribute__((section(".gpr")));
-volatile u8_t fft_dp2_hi __attribute__((section(".gpr")));
-volatile u8_t fft_temp1 __attribute__((section(".gpr")));
-volatile u8_t fft_count1_l __attribute__((section(".gpr")));
-volatile u8_t fft_count1_h __attribute__((section(".gpr")));
-volatile u8_t fft_N_mask_l __attribute__((section(".gpr")));
-volatile u8_t fft_N_mask_h __attribute__((section(".gpr")));
-volatile u8_t fft_N_l __attribute__((section(".gpr")));
-volatile u8_t fft_N_h __attribute__((section(".gpr")));
-volatile u8_t fft_bits __attribute__((section(".gpr")));
-volatile u8_t fft_index_l __attribute__((section(".gpr")));
-volatile u8_t fft_index_h __attribute__((section(".gpr")));
-volatile u8_t fft_a_l __attribute__((section(".gpr")));
-volatile u8_t fft_a_h __attribute__((section(".gpr")));
-volatile u8_t fft_b_l __attribute__((section(".gpr")));
-volatile u8_t fft_b_h __attribute__((section(".gpr")));
-volatile u8_t fft_sign __attribute__((section(".gpr")));
+volatile u8_t fft_dp1_lo ;
+volatile u8_t fft_dp1_hi ;
+volatile u8_t fft_dp2_lo ;
+volatile u8_t fft_dp2_hi ;
+volatile u8_t fft_temp1 ;
+volatile u8_t fft_count1_l ;
+volatile u8_t fft_count1_h ;
+volatile u8_t fft_N_mask_l ;
+volatile u8_t fft_N_mask_h ;
+volatile u8_t fft_N_l ;
+volatile u8_t fft_N_h ;
+volatile u8_t fft_bits ;
+volatile u8_t fft_index_l ;
+volatile u8_t fft_index_h ;
+volatile u8_t fft_a_l ;
+volatile u8_t fft_a_h ;
+volatile u8_t fft_b_l ;
+volatile u8_t fft_b_h ;
+volatile u8_t fft_sign ;
 
 void initialize_fft_data(s16_t *dp, u16_t N)
 {

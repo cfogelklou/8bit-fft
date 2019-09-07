@@ -1,10 +1,18 @@
 #ifndef FFT___H
 #define FFT___H
 
+
+#define MAXFFTSIZE 512
+#define FFTTABLESIZE MAXFFTSIZE/2
+
 #include <stdint.h>
 
-##define MAXFFTSIZE 512
-#define FFTTABLESIZE MAXFFTSIZE/2
+typedef uint8_t u8_t;
+typedef int8_t s8_t;
+typedef uint16_t u16_t;
+typedef int16_t s16_t;
+typedef uint32_t u32_t;
+typedef int32_t s32_t;
 
 typedef struct {
   s16_t real;
@@ -16,10 +24,6 @@ typedef struct {
   s32_t imag;
 } complex32, c32_t;
 
-typedef uint16_t u16_t;
-typedef int16_t s16_t;
-typedef uint32_t u32_t;
-typedef int32_t s32_t;
 
 u16_t add_u16_u16(u16_t a, u16_t b);
 c16_t sub_c16_c16 (c16_t a, c16_t b);
