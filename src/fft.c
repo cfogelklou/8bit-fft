@@ -1,12 +1,40 @@
 #include "fft.h"
 //#include "fft_asm_defs.h"
 
+#ifdef EMBEDDED
 extern c16_t add_c16_c16 (c16_t a, c16_t b );
 extern c16_t sub_c16_c16 (c16_t a, c16_t b);
 extern c16_t mul_c16_c16 (c16_t a, c16_t b);
 extern u16_t add_u16_u16(u16_t a, u16_t b);
 extern u32_t mul_u16_u16(u16_t a, u16_t b);
 extern s16_t get_sine_val (u16_t index);
+#else
+
+static c16_t add_c16_c16 (c16_t a, c16_t b ){
+    c16_t rval = {0,0};
+    return rval;
+}
+static c16_t sub_c16_c16 (c16_t a, c16_t b){
+    c16_t rval = {0,0};
+    return rval;
+}
+static c16_t mul_c16_c16 (c16_t a, c16_t b){
+    c16_t rval = {0,0};
+    return rval;
+}
+static u16_t add_u16_u16(u16_t a, u16_t b){
+    u16_t rval = 0;
+    return rval;
+}
+static u32_t mul_u16_u16(u16_t a, u16_t b){
+    u32_t rval = 0;
+    return rval;
+}
+static s16_t get_sine_val (u16_t index){
+    u32_t rval = 0;
+    return rval;
+}
+#endif
 extern c16_t get_fft_result (u16_t index);
 extern void set_fft_result (u16_t index, c16_t data);
 

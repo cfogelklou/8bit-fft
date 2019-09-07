@@ -25,16 +25,6 @@ typedef struct {
 } complex32, c32_t;
 
 
-u16_t add_u16_u16(u16_t a, u16_t b);
-c16_t sub_c16_c16 (c16_t a, c16_t b);
-
-u32_t mul_u16_u16(u16_t a, u16_t b);
-c16_t add_c16_c16 (c16_t a, c16_t b );
-c32_t add_c32_c32 (c32_t a, c32_t b);
-c32_t sub_c32_c32 (c32_t a, c32_t b);
-c32_t mul_c16_s16(c16_t a, s16_t b); 
-c16_t mul_c16_c16(c16_t a, c16_t b);
-s16_t get_sine_val (u16_t index);
 c16_t shift_c32_by_15(c32_t a);
 c32_t mul_c16_twiddle(c16_t a, c16_t twiddle);
 
