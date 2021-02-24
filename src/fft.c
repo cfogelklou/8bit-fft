@@ -87,8 +87,8 @@ s32_t mul_s16_s16(s16_t a, s16_t b)
 	return as_mul_s16_s16();
 }
 
-/*
-c32_t mul_c16_c16(c16_t a, c16_t b) 
+
+c32_t mul_c16_c16_2(c16_t a, c16_t b) 
 {
 	c32_t rval;
 	s32_t real, imag;
@@ -114,7 +114,7 @@ c32_t mul_c16_c16(c16_t a, c16_t b)
 	rval.imag = imag + as_mul_s16_s16();
 	return rval;
 }
-*/
+
 c32_t mul_c16_s16(c16_t a, s16_t b) 
 {
 	c32_t rval;
